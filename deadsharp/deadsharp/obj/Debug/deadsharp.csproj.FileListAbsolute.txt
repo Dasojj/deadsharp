@@ -1,0 +1,15 @@
+C:\Users\KirillM281\Documents\GitHub\deadsharp\deadsharp\deadsharp\bin\Debug\deadsharp.exe.config
+C:\Users\KirillM281\Documents\GitHub\deadsharp\deadsharp\deadsharp\bin\Debug\deadsharp.exe
+C:\Users\KirillM281\Documents\GitHub\deadsharp\deadsharp\deadsharp\bin\Debug\deadsharp.pdb
+C:\Users\KirillM281\Documents\GitHub\deadsharp\deadsharp\deadsharp\obj\Debug\deadsharp.csprojAssemblyReference.cache
+C:\Users\KirillM281\Documents\GitHub\deadsharp\deadsharp\deadsharp\obj\Debug\MainWindow.g.cs
+C:\Users\KirillM281\Documents\GitHub\deadsharp\deadsharp\deadsharp\obj\Debug\App.g.cs
+C:\Users\KirillM281\Documents\GitHub\deadsharp\deadsharp\deadsharp\obj\Debug\deadsharp_MarkupCompile.cache
+C:\Users\KirillM281\Documents\GitHub\deadsharp\deadsharp\deadsharp\obj\Debug\deadsharp_MarkupCompile.lref
+C:\Users\KirillM281\Documents\GitHub\deadsharp\deadsharp\deadsharp\obj\Debug\MainWindow.baml
+C:\Users\KirillM281\Documents\GitHub\deadsharp\deadsharp\deadsharp\obj\Debug\deadsharp.g.resources
+C:\Users\KirillM281\Documents\GitHub\deadsharp\deadsharp\deadsharp\obj\Debug\deadsharp.Properties.Resources.resources
+C:\Users\KirillM281\Documents\GitHub\deadsharp\deadsharp\deadsharp\obj\Debug\deadsharp.csproj.GenerateResource.cache
+C:\Users\KirillM281\Documents\GitHub\deadsharp\deadsharp\deadsharp\obj\Debug\deadsharp.csproj.CoreCompileInputs.cache
+C:\Users\KirillM281\Documents\GitHub\deadsharp\deadsharp\deadsharp\obj\Debug\deadsharp.exe
+C:\Users\KirillM281\Documents\GitHub\deadsharp\deadsharp\deadsharp\obj\Debug\deadsharp.pdb

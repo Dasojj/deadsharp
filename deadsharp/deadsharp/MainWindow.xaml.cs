@@ -25,11 +25,14 @@ namespace deadsharp
             InitializeComponent();
         }
 
+
+        //Здесь запускаем окно с сессией, в зависимости от выбранного типа
         private void Starting_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
+        //Здесь выбираем тип сессии для пользователя(работа с файлами и директориями; сетевые операции(самое сложное); работа с текстом, батниками, запуском приложений)
         private void Choosing_Click(object sender, RoutedEventArgs e)
         {
 
