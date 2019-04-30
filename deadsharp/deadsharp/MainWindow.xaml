@@ -7,20 +7,27 @@
         mc:Ignorable="d"
         Title="Start window" Height="459" Width="322">
     <Grid Background="#FFA9D6DA">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="77*"/>
+            <ColumnDefinition Width="80*"/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="91*"/>
             <RowDefinition Height="80*"/>
             <RowDefinition Height="51*"/>
-            <RowDefinition Height="77*"/>
-            <RowDefinition Height="56*"/>
+            <RowDefinition Height="36*"/>
+            <RowDefinition Height="41*"/>
+            <RowDefinition Height="55*"/>
             <RowDefinition Height="74*"/>
         </Grid.RowDefinitions>
-        <Button x:Name="starting" Content="Start new session" Margin="10" Background="#FFA9E885" FontSize="16" Click="Starting_Click"/>
-        <Label Content="Here you can set your session up" Margin="10,10,10,13" Grid.Row="1" Foreground="Black" FontSize="18"/>
-        <TextBox Margin="10,12,10,10" Grid.Row="5" TextWrapping="Wrap"/>
-        <Label Content="Name your session" Margin="10" Grid.Row="4" FontSize="16"/>
-        <Button x:Name="choosing" Content="Click here" Margin="10" Grid.Row="3" Background="#FFA9E885" Click="Choosing_Click"/>
-        <Label Content="Choose your session type" Margin="10" Grid.Row="2" FontSize="14"/>
+        <Button x:Name="starting" Content="Начать новую сессию" Margin="10" Background="#FFA9E885" FontSize="16" Click="Starting_Click" Grid.ColumnSpan="2"/>
+        <Label Content="Здесь вы можете настроить вашу сессию" Margin="10,10,10,13" Grid.Row="1" Foreground="Black" FontSize="15" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="sname" Margin="10,12,10,10" Grid.Row="6" TextWrapping="Wrap" Grid.ColumnSpan="2"/>
+        <Label Content="Дайте название вашей сессии" Margin="10" Grid.Row="5" FontSize="16" Grid.ColumnSpan="2"/>
+        <Label Content="Выберите тип сессии" Margin="10" Grid.Row="2" FontSize="18" Grid.ColumnSpan="2"/>
+        <RadioButton x:Name="filebt" GroupName="gr" Content="Файловая" Margin="10,3,10,10" Grid.Row="4"/>
+        <RadioButton x:Name="workbt" GroupName="gr" Content="Управления" Margin="10,22,10,27" Grid.Row="3" Grid.Column="1" Grid.RowSpan="2"/>
+        <RadioButton x:Name="netbt" GroupName="gr" Content="Сетевая" Margin="10,10,10,2" Grid.Row="3"/>
 
     </Grid>
 </Window>
