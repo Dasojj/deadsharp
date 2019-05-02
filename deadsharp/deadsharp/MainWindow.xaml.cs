@@ -25,12 +25,21 @@ namespace deadsharp
             InitializeComponent();
         }
 
-
         //Здесь запускаем окно с сессией, в зависимости от выбранного типа
         //Выбираем тип сессии для пользователя(работа с файлами и директориями; сетевые операции(самое сложное); работа с текстом, батниками, запуском приложений)
         private void Starting_Click(object sender, RoutedEventArgs e)
         {
+            if (filebt.IsChecked == true)
+            {
+                Exchange.s = sname.Text;
+                Window1 mn = new Window1();
+                mn.Show();
+                this.Close();
+            }
+            /*else if(netbt.IsChecked == true)
+            {
 
+            }*/
         }
     }
 }
