@@ -14,6 +14,7 @@ using System.Windows.Shapes;
 using System.Diagnostics;
 using System.IO;
 using System.Threading;
+using System.Timers;
 
 namespace deadsharp
 {
@@ -23,36 +24,46 @@ namespace deadsharp
     
     public partial class Window1 : Window
     {
+        public string path = @"C:\Users\assasinfil\source\repos\KirillM281\deadsharp\deadsharp\deadsharp\bin\Debug";
+        private Process proc = new Process();
+        private Thread t;
+
         public Window1()
         {
             InitializeComponent();
             windooow.Title = Exchange.s;
+            proc.StartInfo = new ProcessStartInfo
+                {
+                    FileName = "cmd.exe",
+                    UseShellExecute = false,
+                    RedirectStandardOutput = true,
+                    RedirectStandardInput = true,
+                    CreateNoWindow = true
+                };
+            proc.Start();
         }
-
-        bool flag = false;
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            //Батник или просто не создаётся, или создается непонятно где. В любом случае буду дебажить.
-            if(flag == false)
-            {
-                File.WriteAllText("somescript.bat",
-                @"cd C:\Users\" + " \n" +
-                "dir /b > otv.txt \n");
-                Process.Start("somescript.bat");
-            }
-           /* else
-            {
-                
-            } */
-            dirinfo.Text = File.ReadAllText("otv.txt");
+            t = new Thread(new ThreadStart(doIt));
+            t.IsBackground = true;
+            t.Start();
         }
-
+        private void doIt()
+        {
+            proc.StandardInput.WriteLine("@cd " + path + "\n");
+            proc.StandardInput.WriteLine("@dir /b\n");
+            dirinfo.Dispatcher.Invoke(new Action(() => { dirinfo.Text = ""; }));
+            while (!proc.StandardOutput.EndOfStream)
+            {
+                string line = proc.StandardOutput.ReadLine();
+                dirinfo.Dispatcher.Invoke(new Action(() => { dirinfo.Text += line + "\n"; }));
+            }
+            proc.WaitForExit();
+        }
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             if (MessageBox.Show("Do you want to change an output type?", "Confirmation", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
             {
-                if (flag == false) flag = true;
-                else flag = false;
             }
         }
     }

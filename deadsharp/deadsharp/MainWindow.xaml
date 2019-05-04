@@ -25,7 +25,7 @@
         <TextBox x:Name="sname" Margin="10,12,10,10" Grid.Row="6" TextWrapping="Wrap" Grid.ColumnSpan="2"/>
         <Label Content="Дайте название вашей сессии" Margin="10" Grid.Row="5" FontSize="16" Grid.ColumnSpan="2"/>
         <Label Content="Выберите тип сессии" Margin="10" Grid.Row="2" FontSize="18" Grid.ColumnSpan="2"/>
-        <RadioButton x:Name="filebt" GroupName="gr" Content="Файловая" Margin="10,3,10,10" Grid.Row="4" FontSize="14"/>
+        <RadioButton x:Name="filebt" GroupName="gr" Content="Файловая" Margin="10,3,10,10" Grid.Row="4" FontSize="14" IsChecked="True"/>
         <RadioButton x:Name="workbt" GroupName="gr" Content="Управления" Margin="10,22,10,27" Grid.Row="3" Grid.Column="1" Grid.RowSpan="2" FontSize="14"/>
         <RadioButton x:Name="netbt" GroupName="gr" Content="Сетевая" Margin="10,10,10,2" Grid.Row="3" FontSize="14"/>
 

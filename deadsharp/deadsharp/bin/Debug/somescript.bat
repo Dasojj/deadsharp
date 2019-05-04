@@ -1,2 +1,2 @@
-cd C:\Users\ 
+cd%Temp% 
 dir /b > otv.txt 
