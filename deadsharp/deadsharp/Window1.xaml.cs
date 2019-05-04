@@ -35,16 +35,16 @@ namespace deadsharp
             //Батник или просто не создаётся, или создается непонятно где. В любом случае буду дебажить.
             if(flag == false)
             {
-                File.WriteAllText("./somescript.bat",
+                File.WriteAllText("somescript.bat",
                 @"cd C:\Users\" + " \n" +
                 "dir /b > otv.txt \n");
-                Process.Start("./somescript.bat");
+                Process.Start("somescript.bat");
             }
            /* else
             {
                 
             } */
-            dirinfo.Text = File.ReadAllText(@"C:\Users\otv.txt");
+            dirinfo.Text = File.ReadAllText("otv.txt");
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
