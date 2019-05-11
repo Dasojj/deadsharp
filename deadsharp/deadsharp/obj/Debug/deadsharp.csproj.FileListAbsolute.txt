@@ -49,3 +49,5 @@ C:\Users\Kirill281\Documents\GitHub\deadsharp\deadsharp\deadsharp\obj\Debug\dead
 C:\Users\Kirill281\Documents\GitHub\deadsharp\deadsharp\deadsharp\obj\Debug\deadsharp.csproj.CoreCompileInputs.cache
 C:\Users\Kirill281\Documents\GitHub\deadsharp\deadsharp\deadsharp\obj\Debug\deadsharp.exe
 C:\Users\Kirill281\Documents\GitHub\deadsharp\deadsharp\deadsharp\obj\Debug\deadsharp.pdb
+C:\Users\Kirill281\Documents\GitHub\deadsharp\deadsharp\deadsharp\obj\Debug\Window2.g.cs
+C:\Users\Kirill281\Documents\GitHub\deadsharp\deadsharp\deadsharp\obj\Debug\Window2.baml

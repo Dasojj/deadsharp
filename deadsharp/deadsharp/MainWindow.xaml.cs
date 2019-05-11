@@ -29,17 +29,19 @@ namespace deadsharp
         //Выбираем тип сессии для пользователя(работа с файлами и директориями; сетевые операции(самое сложное); работа с текстом, батниками, запуском приложений)
         private void Starting_Click(object sender, RoutedEventArgs e)
         {
+            Exchange.s = sname.Text;
             if (filebt.IsChecked == true)
             {
-                Exchange.s = sname.Text;
                 Window1 mn = new Window1();
                 mn.Show();
                 this.Close();
             }
-            /*else if(netbt.IsChecked == true)
+            else if(netbt.IsChecked == true)
             {
-
-            }*/
+                Window2 mn2 = new Window2();
+                mn2.Show();
+                this.Close();
+            }
         }
     }
 }

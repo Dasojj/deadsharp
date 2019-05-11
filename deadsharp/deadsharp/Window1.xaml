@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:deadsharp"
         mc:Ignorable="d"
-        Title="Window1" Height="450" Width="800">
+        Title="Работа с файлами" Height="450" Width="800">
     <Grid>
         <TabControl>
             <TabItem Header="Directory">
@@ -31,10 +31,30 @@
                 </Grid>
             </TabItem>
             <TabItem Header="Change Directory">
-                <Grid Background="#FFA9D6DA"/>
+                <Grid Background="#FFA9D6DA">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="60*"/>
+                        <RowDefinition Height="331*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="104*"/>
+                        <ColumnDefinition Width="27*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Content="Return to the menu" Margin="12,10,10,8.607" Click="Button_Click_1" Background="#FFA9E885" Grid.Column="1"/>
+                </Grid>
             </TabItem>
             <TabItem Header="File work">
-                <Grid Background="#FFA9D6DA"/>
+                <Grid Background="#FFA9D6DA">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="62*"/>
+                        <RowDefinition Height="329*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="625*"/>
+                        <ColumnDefinition Width="161*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Content="Return to the menu" Margin="11,10,10,11.286" Click="Button_Click_1" Background="#FFA9E885" Grid.Column="1"/>
+                </Grid>
             </TabItem>
         </TabControl>
 
