@@ -1,5 +1,2 @@
-deadsharp.exe
-deadsharp.exe.config
-deadsharp.pdb
-otv.txt
-somescript.bat
+Kirill281
+Public

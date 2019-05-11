@@ -24,46 +24,27 @@ namespace deadsharp
     
     public partial class Window1 : Window
     {
-        public string path = @"C:\Users\assasinfil\source\repos\KirillM281\deadsharp\deadsharp\deadsharp\bin\Debug";
-        private Process proc = new Process();
-        private Thread t;
-
+        public string path = @"C:\Users\";
         public Window1()
         {
             InitializeComponent();
             windooow.Title = Exchange.s;
-            proc.StartInfo = new ProcessStartInfo
-                {
-                    FileName = "cmd.exe",
-                    UseShellExecute = false,
-                    RedirectStandardOutput = true,
-                    RedirectStandardInput = true,
-                    CreateNoWindow = true
-                };
-            proc.Start();
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            t = new Thread(new ThreadStart(doIt));
-            t.IsBackground = true;
-            t.Start();
-        }
-        private void doIt()
-        {
-            proc.StandardInput.WriteLine("@cd " + path + "\n");
-            proc.StandardInput.WriteLine("@dir /b\n");
-            dirinfo.Dispatcher.Invoke(new Action(() => { dirinfo.Text = ""; }));
-            while (!proc.StandardOutput.EndOfStream)
-            {
-                string line = proc.StandardOutput.ReadLine();
-                dirinfo.Dispatcher.Invoke(new Action(() => { dirinfo.Text += line + "\n"; }));
-            }
-            proc.WaitForExit();
+            File.WriteAllText("somescript.bat",
+                @"dir /b " + path + " > otv.txt");
+            Process.Start("somescript.bat");
+            dirinfo.Text = File.ReadAllText("otv.txt");
         }
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            if (MessageBox.Show("Do you want to change an output type?", "Confirmation", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            if (MessageBox.Show("Do you want to return to the main menu?",
+            "Your data will be lost", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
             {
+                MainWindow mn1 = new MainWindow();
+                mn1.Show();
+                this.Close();
             }
         }
     }
