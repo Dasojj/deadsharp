@@ -34,13 +34,28 @@
                 <Grid Background="#FFA9D6DA">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="60*"/>
-                        <RowDefinition Height="331*"/>
+                        <RowDefinition Height="67*"/>
+                        <RowDefinition Height="63*"/>
+                        <RowDefinition Height="85*"/>
+                        <RowDefinition Height="26*"/>
+                        <RowDefinition Height="90*"/>
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="104*"/>
-                        <ColumnDefinition Width="27*"/>
+                        <ColumnDefinition Width="97*"/>
+                        <ColumnDefinition Width="164*"/>
+                        <ColumnDefinition Width="89*"/>
+                        <ColumnDefinition Width="101*"/>
+                        <ColumnDefinition Width="173*"/>
+                        <ColumnDefinition Width="162*"/>
                     </Grid.ColumnDefinitions>
-                    <Button Content="Return to the menu" Margin="12,10,10,8.607" Click="Button_Click_1" Background="#FFA9E885" Grid.Column="1"/>
+                    <Button Content="Return to the menu" Margin="12,10,10,9" Click="Button_Click_1" Background="#FFA9E885" Grid.Column="5"/>
+                    <TextBox x:Name="pathtb" Margin="10,14,34,10" TextWrapping="Wrap" BorderBrush="White" SelectionBrush="White" FontSize="20" Grid.ColumnSpan="5"/>
+                    <Label Content="Введите путь для перехода, или...&#xD;&#xA;&#xD;&#xA;Выберите его" Margin="10" Grid.Row="1" FontSize="22" Grid.ColumnSpan="4" Grid.RowSpan="2"/>
+                    <Button x:Name="levo" Content="&lt;--" Margin="10,10,3,9" Grid.Row="3" Background="#FFA9E885" Click="Button_Click_3"/>
+                    <Button x:Name="pravo" Content="--&gt;" Margin="1,10,4,9" Grid.Row="3" Grid.Column="2" Background="#FFA9E885" Click="Button_Click_4"/>
+                    <Button x:Name="ch_cd" Content="make dir to use this" Margin="2,10,4,9" Grid.Row="3" Grid.Column="1" Background="#FFA9E885" Click="Ch_cd_Click"/>
+                    <Label Content="В окне сверху - текущий путь" Grid.Column="4" Margin="10,5,10,10" Grid.Row="2" FontSize="22" Grid.ColumnSpan="2"/>
+                    <Button Content="Go to this directory" Grid.Column="4" Margin="10" Grid.Row="1" Background="#FFA9E885" Click="Button_Click_2"/>
                 </Grid>
             </TabItem>
             <TabItem Header="File work">
