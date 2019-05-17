@@ -58,17 +58,36 @@
                     <Button Content="Go to this directory" Grid.Column="4" Margin="10" Grid.Row="1" Background="#FFA9E885" Click="Button_Click_2"/>
                 </Grid>
             </TabItem>
-            <TabItem Header="File work">
+            <TabItem Header="Text files">
                 <Grid Background="#FFA9D6DA">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="62*"/>
                         <RowDefinition Height="329*"/>
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="625*"/>
+                        <ColumnDefinition Width="136*"/>
+                        <ColumnDefinition Width="141*"/>
+                        <ColumnDefinition Width="348*"/>
                         <ColumnDefinition Width="161*"/>
                     </Grid.ColumnDefinitions>
-                    <Button Content="Return to the menu" Margin="11,10,10,11.286" Click="Button_Click_1" Background="#FFA9E885" Grid.Column="1"/>
+                    <Button Content="Return to the menu" Margin="11,10,10,11" Click="Button_Click_1" Background="#FFA9E885" Grid.Column="3"/>
+                    <TextBox x:Name="txtfilesmain" Grid.Row="1" TextWrapping="Wrap" Text="" Grid.ColumnSpan="4"/>
+                    <Button x:Name="opentxt" Content="Open" Margin="10,10,10,11" Background="#FFA9E885" Click="Opentxt_Click"/>
+                    <Button x:Name="savetxt" Content="Save" Margin="10" Grid.Column="1" Background="#FFA9E885" Click="Savetxt_Click"/>
+                    <TextBox x:Name="fname" Grid.Column="2" Margin="10,10,10,11" TextWrapping="Wrap"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Other files">
+                <Grid Background="#FFA9D6DA">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="104*"/>
+                        <ColumnDefinition Width="27*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="60*"/>
+                        <RowDefinition Height="331*"/>
+                    </Grid.RowDefinitions>
+                    <Button Content="Return to the menu" Margin="12.053,10,10,9" Click="Button_Click_1" Background="#FFA9E885" Grid.Column="1"/>
                 </Grid>
             </TabItem>
         </TabControl>

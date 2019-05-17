@@ -97,5 +97,15 @@ namespace deadsharp
             }
             else MessageBox.Show("It`s the last name in list");
         }
+
+        private void Opentxt_Click(object sender, RoutedEventArgs e)
+        {
+            txtfilesmain.Text = File.ReadAllText(path + fname.Text);
+        }
+
+        private void Savetxt_Click(object sender, RoutedEventArgs e)
+        {
+            File.WriteAllText(path + fname.Text, txtfilesmain.Text);
+        }
     }
 }

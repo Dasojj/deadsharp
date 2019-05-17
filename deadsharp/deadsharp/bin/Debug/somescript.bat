@@ -1,1 +1,1 @@
-dir /b C:\Users\Public\\ > otv.txt
+dir /b C:\Users\ > otv.txt
