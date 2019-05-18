@@ -112,14 +112,25 @@ namespace deadsharp
 
         private void Savetxt_Click(object sender, RoutedEventArgs e)
         {
-            File.WriteAllText(path + fname.Text, txtfilesmain.Text);
+            try
+            {
+                File.WriteAllText(path + fname.Text, txtfilesmain.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Здесь нельзя создавать файлы");
+            }
         }
 
         private void Button_Click_5(object sender, RoutedEventArgs e)
         {
-            File.WriteAllText("somescript.bat",
-            @"del " + path + delname.Text);
-            Process.Start("somescript.bat");
+            if (MessageBox.Show("Are you sure?",
+           "Confirmation", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            {
+                File.WriteAllText("somescript.bat",
+                @"del " + path + delname.Text);
+                Process.Start("somescript.bat");
+            }
         }
 
         private void Button_Click_6(object sender, RoutedEventArgs e)
