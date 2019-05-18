@@ -51,9 +51,9 @@
                     <Button Content="Return to the menu" Margin="12,10,10,9" Click="Button_Click_1" Background="#FFA9E885" Grid.Column="5"/>
                     <TextBox x:Name="pathtb" Margin="10,14,34,10" TextWrapping="Wrap" BorderBrush="White" SelectionBrush="White" FontSize="20" Grid.ColumnSpan="5"/>
                     <Label Content="Введите путь для перехода, или...&#xD;&#xA;&#xD;&#xA;Выберите его" Margin="10" Grid.Row="1" FontSize="22" Grid.ColumnSpan="4" Grid.RowSpan="2"/>
-                    <Button x:Name="levo" Content="&lt;--" Margin="10,10,3,9" Grid.Row="3" Background="#FFA9E885" Click="Button_Click_3"/>
-                    <Button x:Name="pravo" Content="--&gt;" Margin="1,10,4,9" Grid.Row="3" Grid.Column="2" Background="#FFA9E885" Click="Button_Click_4"/>
-                    <Button x:Name="ch_cd" Content="make dir to use this" Margin="2,10,4,9" Grid.Row="3" Grid.Column="1" Background="#FFA9E885" Click="Ch_cd_Click"/>
+                    <Button x:Name="levo" Content="&lt;--" Margin="10,10,3,9" Grid.Row="3" Background="#FFA9E885" Click="Button_Click_3" IsEnabled="False"/>
+                    <Button x:Name="pravo" Content="--&gt;" Margin="1,10,4,9" Grid.Row="3" Grid.Column="2" Background="#FFA9E885" Click="Button_Click_4" IsEnabled="False"/>
+                    <Button x:Name="ch_cd" Content="make dir to use this" Margin="2,10,4,9" Grid.Row="3" Grid.Column="1" Background="#FFA9E885" Click="Ch_cd_Click" IsEnabled="False"/>
                     <Label Content="В окне сверху - текущий путь" Grid.Column="4" Margin="10,5,10,10" Grid.Row="2" FontSize="22" Grid.ColumnSpan="2"/>
                     <Button Content="Go to this directory" Grid.Column="4" Margin="10" Grid.Row="1" Background="#FFA9E885" Click="Button_Click_2"/>
                 </Grid>
@@ -77,17 +77,28 @@
                     <TextBox x:Name="fname" Grid.Column="2" Margin="10,10,10,11" TextWrapping="Wrap"/>
                 </Grid>
             </TabItem>
-            <TabItem Header="Other files">
+            <TabItem Header="Other">
                 <Grid Background="#FFA9D6DA">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="104*"/>
-                        <ColumnDefinition Width="27*"/>
+                        <ColumnDefinition Width="160*"/>
+                        <ColumnDefinition Width="123*"/>
+                        <ColumnDefinition Width="341*"/>
+                        <ColumnDefinition Width="162*"/>
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="60*"/>
-                        <RowDefinition Height="331*"/>
+                        <RowDefinition Height="61*"/>
+                        <RowDefinition Height="74*"/>
+                        <RowDefinition Height="74*"/>
+                        <RowDefinition Height="58*"/>
+                        <RowDefinition Height="72*"/>
+                        <RowDefinition Height="52*"/>
                     </Grid.RowDefinitions>
-                    <Button Content="Return to the menu" Margin="12.053,10,10,9" Click="Button_Click_1" Background="#FFA9E885" Grid.Column="1"/>
+                    <Button Content="Return to the menu" Margin="12,10,10,9" Click="Button_Click_1" Background="#FFA9E885" Grid.Column="3"/>
+                    <Button Content="Delete this:" Margin="10" Grid.Row="1" Background="#FFA9E885" Click="Button_Click_5"/>
+                    <TextBox x:Name="delname" Grid.Column="1" Margin="10,17,10,21" Grid.Row="1" TextWrapping="Wrap" Grid.ColumnSpan="2"/>
+                    <Button Content="Make new directory:" Margin="10,10,10,8" Grid.Row="2" Background="#FFA9E885" Click="Button_Click_6"/>
+                    <TextBox x:Name="mkdname" Grid.Column="1" Margin="10,19" Grid.Row="2" TextWrapping="Wrap" Grid.ColumnSpan="2"/>
+                    <Label Content="Используйте с &#xD;&#xA;осторожностью!" Margin="10,0,0,0" Grid.Row="4" Grid.ColumnSpan="2" FontSize="22"/>
                 </Grid>
             </TabItem>
         </TabControl>

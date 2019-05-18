@@ -100,12 +100,33 @@ namespace deadsharp
 
         private void Opentxt_Click(object sender, RoutedEventArgs e)
         {
-            txtfilesmain.Text = File.ReadAllText(path + fname.Text);
+            try
+            {
+                txtfilesmain.Text = File.ReadAllText(path + fname.Text);
+            }
+            catch
+            {
+                MessageBox.Show("No such file, enter the correct filename");
+            }
         }
 
         private void Savetxt_Click(object sender, RoutedEventArgs e)
         {
             File.WriteAllText(path + fname.Text, txtfilesmain.Text);
+        }
+
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            File.WriteAllText("somescript.bat",
+            @"del " + path + delname.Text);
+            Process.Start("somescript.bat");
+        }
+
+        private void Button_Click_6(object sender, RoutedEventArgs e)
+        {
+            File.WriteAllText("somescript.bat",
+            @"mkdir " + path + mkdname.Text);
+            Process.Start("somescript.bat");
         }
     }
 }
