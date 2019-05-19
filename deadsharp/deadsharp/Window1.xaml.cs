@@ -25,7 +25,7 @@ namespace deadsharp
     public partial class Window1 : Window
     {
         public string path = @"C:\Users\";
-        public string[] ars;
+        List<string> tmp = new List<string>();
         public int I = 0;
         public Window1()
         {
@@ -35,18 +35,26 @@ namespace deadsharp
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            tmp.Clear();
             File.WriteAllText("somescript.bat",
-                @"dir /b " + path + " > otv.txt");
+            @"dir /b " + path + " > otv.txt");
             Process.Start("somescript.bat");
             dirinfo.Text = File.ReadAllText("otv.txt");
-            ars = File.ReadAllLines("otv.txt");
+            tmp.AddRange(File.ReadAllLines("otv.txt"));
+            for (int i = 0; i < tmp.Count; i++)
+            {
+                if(!(Directory.Exists(path + tmp[i])))
+                {
+                    tmp.RemoveAt(i);
+                }
+            }
             I = 0;
-            if (ars.Length != 0)
+            if (tmp.Count != 0)
             {
                 ch_cd.IsEnabled = true;
                 levo.IsEnabled = true;
                 pravo.IsEnabled = true;
-                ch_cd.Content = ars[I];
+                ch_cd.Content = tmp[I];
             }
             else
             {
@@ -83,17 +91,17 @@ namespace deadsharp
             if (I > 0)
             {
                 I--;
-                ch_cd.Content = ars[I];
+                ch_cd.Content = tmp[I];
             }
             else MessageBox.Show("It`s the 1st name in list");
         }
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
-            if (I < ars.Length-1)
+            if (I < tmp.Count - 1)
             {
                 I++;
-                ch_cd.Content = ars[I];
+                ch_cd.Content = tmp[I];
             }
             else MessageBox.Show("It`s the last name in list");
         }
@@ -115,6 +123,7 @@ namespace deadsharp
             try
             {
                 File.WriteAllText(path + fname.Text, txtfilesmain.Text);
+                MessageBox.Show("Сохранено");
             }
             catch
             {
@@ -138,6 +147,22 @@ namespace deadsharp
             File.WriteAllText("somescript.bat",
             @"mkdir " + path + mkdname.Text);
             Process.Start("somescript.bat");
+            MessageBox.Show("Успешно");
+        }
+
+        private void Button_Click_7(object sender, RoutedEventArgs e)
+        {
+            if (MessageBox.Show("Are you sure?",
+           "Confirmation", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            {
+                if (MessageBox.Show("Are you REALLY sure?",
+           "CONFIRMATION", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+                {
+                    File.WriteAllText("somescript.bat",
+                    @"rd /s /q " + path + deldirname.Text);
+                    Process.Start("somescript.bat");
+                }
+            }
         }
     }
 }

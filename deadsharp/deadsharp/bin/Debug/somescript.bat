@@ -1,1 +1,1 @@
-dir /b C:\ > otv.txt
+dir /b C:\Users\Kirill281\Documents\GitHub\deadsharp\deadsharp\\deadsharp\ > otv.txt

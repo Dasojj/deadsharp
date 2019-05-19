@@ -87,18 +87,20 @@
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="61*"/>
-                        <RowDefinition Height="74*"/>
-                        <RowDefinition Height="74*"/>
-                        <RowDefinition Height="58*"/>
-                        <RowDefinition Height="72*"/>
+                        <RowDefinition Height="73*"/>
+                        <RowDefinition Height="73*"/>
+                        <RowDefinition Height="57*"/>
+                        <RowDefinition Height="73*"/>
                         <RowDefinition Height="52*"/>
                     </Grid.RowDefinitions>
                     <Button Content="Return to the menu" Margin="12,10,10,9" Click="Button_Click_1" Background="#FFA9E885" Grid.Column="3"/>
-                    <Button Content="Delete this:" Margin="10" Grid.Row="1" Background="#FFA9E885" Click="Button_Click_5"/>
+                    <Button Content="Delete file:" Margin="10" Grid.Row="1" Background="#FFA9E885" Click="Button_Click_5"/>
                     <TextBox x:Name="delname" Grid.Column="1" Margin="10,17,10,21" Grid.Row="1" TextWrapping="Wrap" Grid.ColumnSpan="2"/>
-                    <Button Content="Make new directory:" Margin="10,10,10,8" Grid.Row="2" Background="#FFA9E885" Click="Button_Click_6"/>
+                    <Button Content="Make new directory:" Margin="10" Grid.Row="2" Background="#FFA9E885" Click="Button_Click_6"/>
                     <TextBox x:Name="mkdname" Grid.Column="1" Margin="10,19" Grid.Row="2" TextWrapping="Wrap" Grid.ColumnSpan="2"/>
-                    <Label Content="Используйте с &#xD;&#xA;осторожностью!" Margin="10,0,0,0" Grid.Row="4" Grid.ColumnSpan="2" FontSize="22"/>
+                    <Button Content="Delete directory:" Margin="10" Background="#FFA9E885" Click="Button_Click_7" Grid.Row="4"/>
+                    <TextBox x:Name="deldirname" Grid.Column="1" Margin="10,19,10,20" TextWrapping="Wrap" Grid.ColumnSpan="2" Grid.Row="4"/>
+                    <Label Content="Be careful with&#xD;&#xA; that one" Margin="10,0" Grid.Row="3" FontSize="18"/>
                 </Grid>
             </TabItem>
         </TabControl>
