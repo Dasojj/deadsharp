@@ -84,6 +84,9 @@ namespace deadsharp
         {
             path += (ch_cd.Content + "\\");
             pathtb.Text = path;
+            ch_cd.IsEnabled = false;
+            levo.IsEnabled = false;
+            pravo.IsEnabled = false;
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)

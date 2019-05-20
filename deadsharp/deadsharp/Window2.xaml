@@ -12,18 +12,31 @@
                 <Grid Background="#FFA9D6DA">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="63*"/>
-                        <RowDefinition Height="125*"/>
+                        <RowDefinition Height="63*"/>
+                        <RowDefinition Height="62*"/>
                         <RowDefinition Height="61*"/>
-                        <RowDefinition Height="142*"/>
+                        <RowDefinition Height="62*"/>
+                        <RowDefinition Height="80*"/>
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="158*"/>
-                        <ColumnDefinition Width="467*"/>
+                        <ColumnDefinition Width="106*"/>
+                        <ColumnDefinition Width="52*"/>
+                        <ColumnDefinition Width="95*"/>
+                        <ColumnDefinition Width="120*"/>
+                        <ColumnDefinition Width="120*"/>
+                        <ColumnDefinition Width="132*"/>
                         <ColumnDefinition Width="161*"/>
                     </Grid.ColumnDefinitions>
-                    <Button Content="Return to the menu" Margin="11,10,10,12" Click="Button_Click_2" Background="#FFA9E885" Grid.Column="2"/>
-                    <Label Content="NSLOOKUP" Margin="10" FontSize="22" FontWeight="Bold"/>
-                    <Label Content="ARP" Margin="10" Grid.Row="2" FontSize="22" FontWeight="Bold"/>
+                    <Button Content="Return to the menu" Margin="11,10,10,12" Click="Button_Click_2" Background="#FFA9E885" Grid.Column="6"/>
+                    <Label Content="NSLOOKUP" Margin="10" FontSize="22" FontWeight="Bold" Grid.ColumnSpan="2"/>
+                    <Label Content="ARP" Margin="10,10,10,11.263" Grid.Row="4" FontSize="22" FontWeight="Bold" Grid.ColumnSpan="2"/>
+                    <TextBlock x:Name="nsresult" Margin="16,10,10,10" Grid.Row="1" TextWrapping="Wrap" Background="White" Grid.Column="5" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+                    <Label Content="Здесь будет &#xD;&#xA;результат:" Grid.Column="5" Margin="20,7,0,0" FontSize="16" FontWeight="Bold"/>
+                    <TextBox x:Name="nsipname" Margin="10,10,11,10" Grid.Row="2" TextWrapping="Wrap" Grid.ColumnSpan="3" FontSize="16"/>
+                    <TextBox x:Name="nsaddressname" Margin="10,10,8,10" Grid.Row="2" TextWrapping="Wrap" Grid.Column="3" FontSize="16" Grid.ColumnSpan="2"/>
+                    <Label Content="Введи ip:" Margin="10,20,6,0" Grid.Row="1" FontSize="18"/>
+                    <Label Content="Введи адрес:" Margin="0,20,6,0" Grid.Row="1" FontSize="18" Grid.Column="3"/>
+                    <TextBlock x:Name="arpres" Grid.Column="2" Margin="10" Grid.Row="3" Grid.RowSpan="3" TextWrapping="Wrap" Grid.ColumnSpan="3" Background="White" FontSize="14"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Ping">
