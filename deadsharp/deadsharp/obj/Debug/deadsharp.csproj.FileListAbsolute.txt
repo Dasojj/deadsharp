@@ -54,3 +54,4 @@ C:\Users\Kirill281\Documents\GitHub\deadsharp\deadsharp\deadsharp\obj\Debug\Wind
 C:\Users\assasinfil\Source\Repos\KirillM281\deadsharp\deadsharp\deadsharp\obj\Debug\Window2.g.cs
 C:\Users\assasinfil\Source\Repos\KirillM281\deadsharp\deadsharp\deadsharp\obj\Debug\App.baml
 C:\Users\assasinfil\Source\Repos\KirillM281\deadsharp\deadsharp\deadsharp\obj\Debug\Window2.baml
+C:\Users\Kirill281\Documents\GitHub\deadsharp\deadsharp\deadsharp\obj\Debug\App.baml

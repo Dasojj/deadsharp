@@ -26,7 +26,6 @@
         <Label Content="Дайте название вашей сессии" Margin="10" Grid.Row="5" FontSize="16" Grid.ColumnSpan="2" Foreground="#FF96DCFF" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch"/>
         <Label Content="Выберите тип сессии" Margin="10" Grid.Row="2" FontSize="18" Grid.ColumnSpan="2" Foreground="#FF96DCFF" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
         <RadioButton x:Name="filebt" GroupName="gr" Content="Файловая" Margin="10,0" Grid.Row="4" FontSize="14" IsChecked="True" Foreground="#FF96DCFF" VerticalContentAlignment="Center" Padding="5,0,0,0"/>
-        <RadioButton x:Name="workbt" GroupName="gr" Content="Управления" Margin="10,0" Grid.Row="3" Grid.Column="1" FontSize="14" Foreground="#FF96DCFF" Padding="5,0,0,0" VerticalContentAlignment="Center"/>
         <RadioButton x:Name="netbt" GroupName="gr" Content="Сетевая" Margin="10,0" Grid.Row="3" FontSize="14" Foreground="#FF96DCFF" Padding="6,0,0,0" VerticalContentAlignment="Center"/>
 
     </Grid>
