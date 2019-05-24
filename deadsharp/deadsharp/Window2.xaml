@@ -8,8 +8,14 @@
         Title="Работа с сетевыми операциями" Height="450" Width="800" Background="White">
     <Grid Background="White">
         <TabControl>
-            <TabItem Header="Nslookup">
-                <Grid Background="#FFA9D6DA">
+            <TabItem Header="Nslookup" Foreground="#FF96DCFF">
+                <TabItem.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FF0F1E32" Offset="0"/>
+                        <GradientStop Color="#FF1E3C64" Offset="1"/>
+                    </LinearGradientBrush>
+                </TabItem.Background>
+                <Grid Background="#FF10161B">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="63*"/>
                         <RowDefinition Height="63*"/>
@@ -27,20 +33,26 @@
                         <ColumnDefinition Width="132*"/>
                         <ColumnDefinition Width="161*"/>
                     </Grid.ColumnDefinitions>
-                    <Button Content="Return to the menu" Margin="11,10,10,12" Click="Button_Click_2" Background="#FFA9E885" Grid.Column="6"/>
-                    <Label Content="NSLOOKUP" Margin="10" FontSize="22" FontWeight="Bold" Grid.ColumnSpan="2"/>
-                    <Label Content="ARP" Margin="10,10,10,11.263" Grid.Row="4" FontSize="22" FontWeight="Bold" Grid.ColumnSpan="2"/>
-                    <TextBox x:Name="nsipname" Margin="10,10,11,10" Grid.Row="2" TextWrapping="Wrap" Grid.ColumnSpan="3" FontSize="16"/>
-                    <TextBox x:Name="nsaddressname" Margin="10,10,8,10" Grid.Row="2" TextWrapping="Wrap" Grid.Column="3" FontSize="16" Grid.ColumnSpan="2"/>
-                    <Label Content="IP:" Margin="10,20,6,0" Grid.Row="1" FontSize="18"/>
-                    <Label Content="Адрес:" Margin="0,20,6,0" Grid.Row="1" FontSize="18" Grid.Column="3"/>
-                    <TextBlock x:Name="arpres" Grid.Column="2" Margin="10" Grid.Row="3" Grid.RowSpan="3" TextWrapping="Wrap" Grid.ColumnSpan="3" Background="White" FontSize="14"/>
-                    <Button Content="Check your arp" Margin="10" Background="#FFA9E885" Grid.Column="5" Grid.ColumnSpan="2" Grid.Row="5" Click="Button_Click"/>
-                    <Button Content="Try nslookup" Margin="10" Background="#FFA9E885" Grid.Column="5" Grid.ColumnSpan="2" Grid.Row="2" Click="Button_Click_6"/>
+                    <Button Content="Return to the menu" Margin="11,10,10,12" Click="Button_Click_2" Background="#FF64FFFF" Grid.Column="6"/>
+                    <Label Content="NSLOOKUP" Margin="10" FontSize="22" FontWeight="Bold" Grid.ColumnSpan="2" Foreground="#FF96DCFF"/>
+                    <Label Content="ARP" Margin="10,10,10,11.263" Grid.Row="4" FontSize="22" FontWeight="Bold" Grid.ColumnSpan="2" Foreground="#FF96DCFF"/>
+                    <TextBox x:Name="nsipname" Margin="10,10,11,10" Grid.Row="2" TextWrapping="Wrap" Grid.ColumnSpan="3" FontSize="16" Background="#FFC8FFFF"/>
+                    <TextBox x:Name="nsaddressname" Margin="10,10,8,10" Grid.Row="2" TextWrapping="Wrap" Grid.Column="3" FontSize="16" Grid.ColumnSpan="2" Background="#FFC8FFFF"/>
+                    <Label Content="IP:" Margin="10,20,6,0" Grid.Row="1" FontSize="18" Foreground="#FF96DCFF"/>
+                    <Label Content="Адрес:" Margin="0,20,6,0" Grid.Row="1" FontSize="18" Grid.Column="3" Foreground="#FF96DCFF"/>
+                    <TextBlock x:Name="arpres" Grid.Column="2" Margin="10" Grid.Row="3" Grid.RowSpan="3" TextWrapping="Wrap" Grid.ColumnSpan="3" Background="#FFC8FFFF" FontSize="14"/>
+                    <Button Content="Check your arp" Margin="10" Background="#FF64FFFF" Grid.Column="5" Grid.ColumnSpan="2" Grid.Row="5" Click="Button_Click"/>
+                    <Button Content="Try nslookup" Margin="10" Background="#FF64FFFF" Grid.Column="5" Grid.ColumnSpan="2" Grid.Row="2" Click="Button_Click_6"/>
                 </Grid>
             </TabItem>
-            <TabItem Header="Ping">
-                <Grid Background="#FFA9D6DA">
+            <TabItem Header="Ping" Foreground="#FF96DCFF">
+                <TabItem.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FF0F1E32" Offset="0"/>
+                        <GradientStop Color="#FF1E3C64" Offset="1"/>
+                    </LinearGradientBrush>
+                </TabItem.Background>
+                <Grid Background="#FF10161B">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="61*"/>
                         <RowDefinition Height="66*"/>
@@ -55,20 +67,26 @@
                         <ColumnDefinition Width="220*"/>
                         <ColumnDefinition Width="159*"/>
                     </Grid.ColumnDefinitions>
-                    <Button Content="Return to the menu" Margin="9,10,10,10" Click="Button_Click_2" Background="#FFA9E885" Grid.Column="5"/>
-                    <Label Content="Что пингуем:" Margin="10,10,15,10" FontSize="22"/>
-                    <TextBox x:Name="pingname" Grid.Column="1" Margin="10" TextWrapping="Wrap" FontSize="22" Grid.ColumnSpan="4"/>
-                    <Label Content="Сколько пакетов:" Margin="10,10,12,11" Grid.Row="1" FontSize="22" Grid.ColumnSpan="3"/>
-                    <Label Content="Размер пакетов:" Margin="10,10,12,15" Grid.Row="2" FontSize="22" Grid.ColumnSpan="3"/>
-                    <TextBox x:Name="pingcnt" Grid.Column="3" Margin="10,10,15,10" Grid.Row="1" TextWrapping="Wrap" FontSize="22"/>
-                    <TextBox x:Name="pingsize" Grid.Column="3" Margin="10,14,15,10" Grid.Row="2" TextWrapping="Wrap" FontSize="22"/>
-                    <TextBlock x:Name="pingres" Margin="10" Grid.Row="1" TextWrapping="Wrap" Grid.ColumnSpan="2" Background="White" FontSize="14" Grid.Column="4" Grid.RowSpan="3"/>
-                    <Button Content="Поехали" Margin="10,0,0,10" Background="#FFA9E885" Grid.Row="3" Grid.ColumnSpan="2" Click="Button_Click_4"/>
-                    <Button Content="Посмотреть, что получилось" Margin="0,0,10,10" Background="#FFA9E885" Grid.Row="3" Grid.Column="3" Click="Button_Click_5"/>
+                    <Button Content="Return to the menu" Margin="9,10,10,10" Click="Button_Click_2" Background="#FF64FFFF" Grid.Column="5"/>
+                    <Label Content="Что пингуем:" Margin="10,10,15,10" FontSize="22" Foreground="#FF96DCFF"/>
+                    <TextBox x:Name="pingname" Grid.Column="1" Margin="10" TextWrapping="Wrap" FontSize="22" Grid.ColumnSpan="4" Background="#FFC8FFFF"/>
+                    <Label Content="Сколько пакетов:" Margin="10,10,12,11" Grid.Row="1" FontSize="22" Grid.ColumnSpan="3" Foreground="#FF96DCFF"/>
+                    <Label Content="Размер пакетов:" Margin="10,10,12,15" Grid.Row="2" FontSize="22" Grid.ColumnSpan="3" Foreground="#FF96DCFF"/>
+                    <TextBox x:Name="pingcnt" Grid.Column="3" Margin="10,10,15,10" Grid.Row="1" TextWrapping="Wrap" FontSize="22" Background="#FFC8FFFF"/>
+                    <TextBox x:Name="pingsize" Grid.Column="3" Margin="10,14,15,10" Grid.Row="2" TextWrapping="Wrap" FontSize="22" Background="#FFC8FFFF"/>
+                    <TextBlock x:Name="pingres" Margin="10" Grid.Row="1" TextWrapping="Wrap" Grid.ColumnSpan="2" Background="#FFC8FFFF" FontSize="14" Grid.Column="4" Grid.RowSpan="3"/>
+                    <Button Content="Поехали" Margin="10,0,0,10" Background="#FF64FFFF" Grid.Row="3" Grid.ColumnSpan="2" Click="Button_Click_4"/>
+                    <Button Content="Посмотреть, что получилось" Margin="0,0,10,10" Background="#FF64FFFF" Grid.Row="3" Grid.Column="3" Click="Button_Click_5"/>
                 </Grid>
             </TabItem>
-            <TabItem Header="Tracert">
-                <Grid Background="#FFA9D6DA">
+            <TabItem Header="Tracert" Foreground="#FF96DCFF">
+                <TabItem.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FF0F1E32" Offset="0"/>
+                        <GradientStop Color="#FF1E3C64" Offset="1"/>
+                    </LinearGradientBrush>
+                </TabItem.Background>
+                <Grid Background="#FF10161B">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="57*"/>
                         <RowDefinition Height="58*"/>
@@ -80,12 +98,12 @@
                         <ColumnDefinition Width="78*"/>
                         <ColumnDefinition Width="53*"/>
                     </Grid.ColumnDefinitions>
-                    <Button Content="Return to the menu" Margin="9,10,10,7" Click="Button_Click_2" Background="#FFA9E885" Grid.Column="2"/>
-                    <TextBlock x:Name="tracertres" Margin="10" TextWrapping="Wrap" Background="White" FontSize="14" Grid.RowSpan="4"/>
-                    <Label Content="Что отслеживаем:" Grid.Column="1" Margin="10" FontSize="20"/>
-                    <TextBox x:Name="tracertname" Margin="10,10,10,10" Grid.Row="1" TextWrapping="Wrap" FontSize="16" Grid.Column="1"/>
-                    <Button Content="Старт" Margin="10" Background="#FFA9E885" Grid.Column="2" Grid.Row="1" Click="Button_Click_1"/>
-                    <Button Content="Посмотреть, что получилось" Margin="10" Background="#FFA9E885" Grid.Column="1" Grid.Row="3" Click="Button_Click_3"/>
+                    <Button Content="Return to the menu" Margin="9,10,10,7" Click="Button_Click_2" Background="#FF64FFFF" Grid.Column="2"/>
+                    <TextBlock x:Name="tracertres" Margin="10" TextWrapping="Wrap" Background="#FFC8FFFF" FontSize="14" Grid.RowSpan="4"/>
+                    <Label Content="Что отслеживаем:" Grid.Column="1" Margin="10" FontSize="20" Foreground="#FF96DCFF"/>
+                    <TextBox x:Name="tracertname" Margin="10,10,10,10" Grid.Row="1" TextWrapping="Wrap" FontSize="16" Grid.Column="1" Background="#FFC8FFFF"/>
+                    <Button Content="Старт" Margin="10" Background="#FF64FFFF" Grid.Column="2" Grid.Row="1" Click="Button_Click_1"/>
+                    <Button Content="Посмотреть, что получилось" Margin="10" Background="#FF64FFFF" Grid.Column="1" Grid.Row="3" Click="Button_Click_3"/>
                 </Grid>
             </TabItem>
         </TabControl>
