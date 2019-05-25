@@ -1,1 +1,1 @@
-arp -a > otv.txt
+nslookup  > otv.txt
