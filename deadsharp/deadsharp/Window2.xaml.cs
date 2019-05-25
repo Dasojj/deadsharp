@@ -60,6 +60,7 @@ namespace deadsharp
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
+            tracertres.Text = File.ReadAllText("otv.txt");
             //Здесь пишем вывод трассировки из файла, куда перенаправляли(otv.txt), когда пользователь подождал
         }
 
@@ -72,6 +73,7 @@ namespace deadsharp
 
         private void Button_Click_5(object sender, RoutedEventArgs e)
         {
+            pingres.Text = File.ReadAllText("otv.txt");
             //Здесь у нас будет вывод пинга(скорее всего придется парсить(мб и нет)) из файла(otv.txt)
         }
 
@@ -81,10 +83,18 @@ namespace deadsharp
             //П.С. придётся парсить
             if (nsaddressname.Text == "")
             {
+                File.WriteAllText("somescript.bat",
+                @"nslookup " + nsipname.Text + " > otv.txt");
+                Process.Start("somescript.bat");
+                nsaddressname.Text = File.ReadAllText("otv.txt");
                 //Даём пользователю адрес
             }
             else
             {
+                File.WriteAllText("somescript.bat",
+                @"nslookup " + nsaddressname.Text + " > otv.txt");
+                Process.Start("somescript.bat");
+                nsipname.Text = File.ReadAllText("otv.txt");
                 //Даём пользователю IP
             }
         }

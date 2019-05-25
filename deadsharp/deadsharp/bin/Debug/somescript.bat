@@ -1,1 +1,1 @@
-dir /b C:\Users\ > otv.txt
+nslookup  > otv.txt
