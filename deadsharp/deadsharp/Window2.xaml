@@ -74,7 +74,7 @@
                     <Label Content="Размер пакетов:" Margin="10,10,12,15" Grid.Row="2" FontSize="22" Grid.ColumnSpan="3" Foreground="#FF96DCFF"/>
                     <TextBox x:Name="pingcnt" Grid.Column="3" Margin="10,10,15,10" Grid.Row="1" TextWrapping="Wrap" FontSize="22" Background="#FFC8FFFF"/>
                     <TextBox x:Name="pingsize" Grid.Column="3" Margin="10,14,15,10" Grid.Row="2" TextWrapping="Wrap" FontSize="22" Background="#FFC8FFFF"/>
-                    <TextBlock x:Name="pingres" Margin="10" Grid.Row="1" TextWrapping="Wrap" Grid.ColumnSpan="2" Background="#FFC8FFFF" FontSize="14" Grid.Column="4" Grid.RowSpan="3"/>
+                    <TextBlock x:Name="pingres" Margin="10" Grid.Row="1" TextWrapping="Wrap" Grid.ColumnSpan="2" Background="#FFC8FFFF" FontSize="14" Grid.Column="4" Grid.RowSpan="3" Foreground="#FF0F2332"/>
                     <Button Content="Поехали" Margin="10,0,0,10" Background="#FF64FFFF" Grid.Row="3" Grid.ColumnSpan="2" Click="Button_Click_4"/>
                     <Button Content="Посмотреть, что получилось" Margin="0,0,10,10" Background="#FF64FFFF" Grid.Row="3" Grid.Column="3" Click="Button_Click_5"/>
                 </Grid>
@@ -99,7 +99,7 @@
                         <ColumnDefinition Width="53*"/>
                     </Grid.ColumnDefinitions>
                     <Button Content="Return to the menu" Margin="9,10,10,7" Click="Button_Click_2" Background="#FF64FFFF" Grid.Column="2"/>
-                    <TextBlock x:Name="tracertres" Margin="10" TextWrapping="Wrap" Background="#FFC8FFFF" FontSize="14" Grid.RowSpan="4"/>
+                    <TextBlock x:Name="tracertres" Margin="10" TextWrapping="Wrap" Background="#FFC8FFFF" FontSize="14" Grid.RowSpan="4" Foreground="#FF0F2332"/>
                     <Label Content="Что отслеживаем:" Grid.Column="1" Margin="10" FontSize="20" Foreground="#FF96DCFF"/>
                     <TextBox x:Name="tracertname" Margin="10,10,10,10" Grid.Row="1" TextWrapping="Wrap" FontSize="16" Grid.Column="1" Background="#FFC8FFFF"/>
                     <Button Content="Старт" Margin="10" Background="#FF64FFFF" Grid.Column="2" Grid.Row="1" Click="Button_Click_1"/>

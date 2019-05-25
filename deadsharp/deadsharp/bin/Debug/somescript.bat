@@ -1,1 +1,1 @@
-nslookup  > otv.txt
+nslookup ya.ru > otv.txt
