@@ -1,1 +1,1 @@
-arp -a > otv.txt
+dir /b C:\Users\ > otv.txt
