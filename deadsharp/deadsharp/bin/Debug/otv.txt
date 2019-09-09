@@ -1,7 +1,6 @@
 Сервер:  UnKnown
-Address:  172.21.135.254
+Address:  192.168.0.69
 
-Имя:     ya.ru
-Addresses:  2a02:6b8::2:242
-	  87.250.250.242
+Имя:     familysearch.yandex.ru
+Address:  213.180.193.56
 

@@ -1,1 +1,1 @@
-nslookup ya.ru > otv.txt
+nslookup 213.180.193.56 > otv.txt

@@ -167,5 +167,10 @@ namespace deadsharp
                 }
             }
         }
+
+        private void Cleartxt_Click(object sender, RoutedEventArgs e)
+        {
+            txtfilesmain.Text = "";
+        }
     }
 }
